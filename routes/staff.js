@@ -3,8 +3,8 @@ var router = express.Router();
 const skillsCtrl = require("../controllers/staff");
 
 /* GET home page. */
-router.get("/", function (req, res, next) {
-  res.render("staff/index", { title: "Staff" });
+router.get("/index", function (req, res, next) {
+  res.render("staff", { title: "Staff" });
 });
 
 //GET show page
