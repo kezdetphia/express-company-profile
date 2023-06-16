@@ -3,13 +3,11 @@ var router = express.Router();
 const skillsCtrl = require("../controllers/staff");
 
 /* GET home page. */
-router.get("/index", function (req, res, next) {
-  res.render("staff", { title: "Staff" });
-});
+router.get("/", skillsCtrl.index);
 
 //GET show page
-router.get("/show", function (req, res, next)) {
-  res.render("staff/show", {skillsCtrl.})
-}
+// router.get("/show", function (req, res, next)) {
+//   res.render("staff/show", {skillsCtrl.})
+// }
 
 module.exports = router;
