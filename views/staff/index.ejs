@@ -1,22 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Express HomePage</title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-  </head>
-  <body>
-    <h3>staff hereeeee</h3>
+<%- include('../partials/header') %>
 
-    <ul>
-      <% staff.forEach(element => { %>
-      <li>
-        Name: <%= element.name %> | Position: <%= element.position%> | Rating
-        <%= element.rating %>
-      </li>
-      <% }); %>
-    </ul>
-  </body>
-</html>
+<ul>
+  <% staff.forEach(element => { %>
+  <li>
+    <a href="/staff/<%=element.id%>"><%= element.name %></a>
+  </li>
+  <% }); %>
+</ul>
+<%- include('../partials/footer') %>

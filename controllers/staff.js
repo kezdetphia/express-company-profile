@@ -6,9 +6,12 @@ module.exports = {
 };
 
 function index(req, res) {
-  res.render("staff/index", { staff: Staff.getAll() });
+  res.render("staff/index", { staff: Staff.getAll(), title: "Staff" });
 }
 
 function show(req, res) {
-  res.rends("staff/show", { staff: Staff.getOne(req.params.id) });
+  res.render("staff/show", {
+    staff: Staff.getOne(req.params.id),
+    title: Staff.getOne(req.params.id).name,
+  });
 }

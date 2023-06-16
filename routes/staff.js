@@ -5,9 +5,7 @@ const skillsCtrl = require("../controllers/staff");
 /* GET home page. */
 router.get("/", skillsCtrl.index);
 
-//GET show page
-// router.get("/show", function (req, res, next)) {
-//   res.render("staff/show", {skillsCtrl.})
-// }
+// GET show page
+router.get("/:id", skillsCtrl.show);
 
 module.exports = router;
