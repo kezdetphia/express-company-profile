@@ -1,12 +1,13 @@
 const Staff = require("../models/staff");
 
+
 module.exports = {
   index,
   show,
 };
 
 function index(req, res) {
-  res.render("staff/index", { staff: Staff.getAll() });
+  res.render("staff", { staff: Staff.getAll() });
 }
 
 function show(req, res) {

@@ -30,5 +30,5 @@ function getAll() {
 
 function getOne(id) {
   id = parseInt(id);
-  return staff.find((member) => id === staff.id);
+  return staff.find((member) => member.id === id);
 }
