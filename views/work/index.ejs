@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+
+<ul>
+  <% work.forEach(w =>{%>
+  <li>
+    <a href="/work/<%= w.id %>"><%=w.name%></a>
+  </li>
+
+  <%})%>
+</ul>
+
+<%- include('../partials/footer') %>

@@ -1,9 +1,8 @@
 var express = require("express");
 var router = express.Router();
+const linksCtrl = require("../controllers/links");
 
 /* GET users listing. */
-router.get("/", function (req, res, next) {
-  res.render("links", { title: "Links" });
-});
+router.get("/", linksCtrl.index);
 
 module.exports = router;

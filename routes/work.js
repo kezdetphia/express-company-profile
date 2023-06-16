@@ -1,9 +1,8 @@
 var express = require("express");
 var router = express.Router();
+const workCtrl = require("../controllers/work");
 
-/* GET home page. */
-router.get("/", function (req, res, next) {
-  res.render("work", { title: "Work" });
-});
+router.get("/", workCtrl.index);
+router.get("/:id", workCtrl.show);
 
 module.exports = router;
